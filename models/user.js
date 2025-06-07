@@ -1,56 +1,47 @@
 import mongoose from 'mongoose';
 
 const userSchema = new mongoose.Schema({
-        
-
     firstName : {
         type : String,
-        required : true,
+        required : true
     },
-
     lastName : {
         type : String,
-        required : true,
+        required : true
     },
-
     email : {
         type : String,
         required : true,
-        unique : true,
+        unique : true
     },
-
     password : {
         type : String,
-        required : true,
+        required : true
     },
-
-    phone :  {
+    phone : {
         type : String,
         default : "NOT GIVEN"
     },
-
-    isBlocked : {
+    isBlocked: {
         type : Boolean,
-        default : false,
+        default : false
     },
-
     role : {
         type : String,
-        default : "user",
+        default : "user"
     },
-
     isEmailVerified : {
         type : Boolean,
-        default : false,
+        default : false
     },
-
     image : {
         type : String,
-        default : "https://res.cloudinary.com/dqj8v0x5g/image/upload/v1698230984/Default-User-Image.png"
+        default : "https://png.pngtree.com/png-clipart/20191120/original/pngtree-outline-user-icon-png-image_5045523.jpg"
     }
-
 })
 
-const User = mongoose.model("users", userSchema)
+const User = mongoose.model("users",userSchema)
 
 export default User;
+
+
